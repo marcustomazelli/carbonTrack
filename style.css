@@ -1,169 +1,191 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-@font-face {
-    font-family: 'Arbutus Slab';
-    src: url('font/ArbutusSlab-Regular.ttf') format('truetype');
-}
-
-
+/* Estilos globais */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f6f6e9;
-    color: #272727;
+    background-color: #1f2521;
+    color: white;
+    overflow-x: hidden;
+  }
+  
+  .container {
+    max-width: 1200px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o conteúdo */
+  }
+  
+
+  /* Estilo do cabeçalho */
+
+header h1{
+    font-family:  "Bree Serif", serif;
+    font-weight: lighter;
 }
 
-section h2,p{
-    font-family: "Barlow", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+section h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px;
+    color: #80c362;
 }
 
 section h2{
-    margin-bottom: 30px;
+    color: #80c362;
+    font-size: 15px;
 }
 
-section p {
-    text-align: justify;
-    line-height: 1.6; 
-    margin-bottom: 30px; 
-}
-
-
-header {
-    font-family: "Bree Serif", serif;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 25px;
-    background-color: #f6f6e9;
-    color: #272727;
-    padding: 20px;
-    text-align: center;
-}
-
-.logo {
-    width: 100px; /* Ajuste o tamanho conforme necessário */
-    height: auto;
-    margin-right: 15px;
-}
-
-nav {
-    font-family: "Barlow", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    background-color:#272727;
-    padding: 25px;
-    text-align: center;
-    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.192);
-}
-
-nav a {
-    color: #f6f6e9;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-nav a {
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color:#587c59;
+h2, p{
+    font-family: "Open Sans", sans-serif;
 }
 
 
-.hero {
-    background-image: url('caminho-da-imagem-hero.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 100px 20px;
-    color: #fdfcf2;
-    text-align: center;
-}
-
-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-section img {
+  header {
+    display: flex;
+    justify-content: space-around ;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #1f2521;
+    border-bottom: 1px solid#1f2521;
     width: 100%;
-    max-width: 600px;
+    z-index: 10;
+  }
+
+
+  /* Logo e Título alinhados lado a lado */
+.logo-title {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+  }
+  
+  .logo-title img {
+    width: 50px; /* Ajuste o tamanho da logo conforme necessário */
+    margin-right: 10px; /* Espaçamento entre a logo e o título */
+  }
+  
+  .logo-title h1 {
+    font-size: 1.8em;
+    margin: 0;
+    color: white;
+  }
+  
+  .logo img {
+    width: 100px;
+    display: flex;
+    align-items: center;
+
+  }
+
+
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-left: 30px;
+  }
+  
+  nav ul li a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+  nav ul li a:hover {
+    color: #80c362;
+  }
+  
+  /* Estilos das seções */
+  section {
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+    align-items: center;
+    padding: 0px 50px;
+    border-bottom: 1px solid #333;
+    min-height: 100vh;
+  
+  }
+
+  
+  .text {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .image {
+    flex: 1;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Responsividade para mobile */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+  
+    nav ul {
+        padding-top: 20px;
+        flex-direction: row; /* Links do menu em linha (lado a lado) */
+        flex-wrap: wrap; /* Permite que eles quebrem de linha se necessário */
+        justify-content: center; /* Centraliza os links no mobile */
+      }
+  
+    nav ul li {
+      margin: 10px 10px;
+    }
+  
+    section {
+      flex-direction: column;
+      text-align: center;
+      padding: 50px 20px;
+    }
+  
+    .text {
+      margin: 0;
+      text-align: justify; /* Alinha o texto no mobile também */
+    }
+  
+    .image {
+      margin-top: 20px;
+    }
+  }
+  
+  /* Estilos específicos para a seção do time */
+  .team-members {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .member {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  .member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  
+  /* Seção de Agradecimentos */
+  #thanks {
+    text-align: center;
+  }
+  
+  #thanks img {
+    width: 100%;
     height: auto;
     margin-bottom: 20px;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color:#587c59;
-    color: #fdfcf2;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
-.button:hover {
-    background-color: #272727;
-    color: #587c59;
-}
-
-footer {
-    background-color: #272727;
-    color: #fdfcf2;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Mantém o estilo do corpo e das outras seções */
-.content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 40px 20px;
-}
-
-.content .text {
-    flex: 1;
-    padding: 20px;
-}
-
-.content .image {
-    flex: 1;
-    text-align: center;
-}
-
-.content img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-}
-
-.reverse {
-    flex-direction: row-reverse;
-}
-
-/* Ajustes para mobile */
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column;
-    }
-    
-    .reverse {
-        flex-direction: column;
-    }
-    
-    .content img {
-        margin-bottom: 20px;
-    }
-}
-
+  }
+  
