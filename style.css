@@ -126,6 +126,32 @@ h2, p{
     width: 100%;
     height: auto;
   }
+
+  /* Estilo dos botões (agora links) */
+.btn {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top:10px;
+    font-size: 1em;
+    color: white;
+    background-color: #80c362; /* Cor de fundo */
+    border: none;
+    border-radius: 0px;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+  }
+
+  
+  .btn:hover {
+    background-color: #2d8a2f; /* Cor ao passar o mouse */
+  }
+
+
+  
   
   /* Responsividade para mobile */
   @media (max-width: 768px) {
@@ -154,6 +180,8 @@ h2, p{
       margin: 0;
       text-align: justify; /* Alinha o texto no mobile também */
     }
+
+
   
     .image {
       margin-top: 20px;
