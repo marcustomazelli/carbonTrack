@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carbonTrack</title>\
+    <link rel="stylesheet" href="stylecalc.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de dióxido de carbono</h1>
+    </header>
+    <!-- Adiciona no corpo do seu HTML -->
+<section>
+    <div id="calculator">
+        <h2>Calculadora de Emissão de CO₂</h2>
+    
+        <label for="electricity">Consumo de eletricidade (kWh/mês):</label>
+        <input type="number" id="electricity" placeholder="kWh">
+    
+        <label for="fuel">Distância percorrida com o carro (km/semana):</label>
+        <input type="number" id="fuel" placeholder="Quilômetros">
+    
+        <label for="carType">Tipo de combustível do carro:</label>
+        <select id="carType">
+          <option value="gasolina">Gasolina</option>
+          <option value="diesel">Diesel</option>
+          <option value="eletrico">Elétrico</option>
+        </select>
+    
+        <button onclick="calculateCO2()">Calcular</button>
+    
+        <p id="result"></p>
+      </div>
+</section>
+  
+</body>
+</html>
